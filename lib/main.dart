@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:practical_1/Practicals/Practical_6/notes_app.dart';
+import 'package:practical_1/Practicals/Practical_7/gallery_app.dart';
+import 'package:practical_1/Practicals/Practical_7/product_catalog_app.dart';
+import 'package:practical_1/Practicals/Practical_7/recipe_app.dart';
 
 import 'practicals/Practical_4/form_validation_app.dart';
 import 'practicals/practical_1/splashscreen.dart';
@@ -70,6 +73,40 @@ class MyApp extends StatelessWidget {
       'duration': '10 min',
       'tag': 'Storage',
     },
+    {
+      'title': 'Product Catalog',
+      'subtitle': 'GridView & Custom Cards',
+      'widget': ProductCatalogApp(),
+      'icon': Icons.shopping_cart_rounded,
+      'color': const Color(0xFFE74C3C),
+      'description': 'Reusable widgets with grid layout',
+      'difficulty': 'Advanced',
+      'duration': '15 min',
+      'tag': 'UI Design',
+    },
+    {
+      'title': 'Recipe App',
+      'subtitle': 'Recipe Management & Display',
+      'icon': Icons.restaurant_menu_rounded,
+      'color': const Color(0xFF3498DB),
+      'description': 'Manage and display recipes with images',
+      'difficulty': 'Intermediate',
+      'widget': RecipeApp(), // This practical is a console app
+      'duration': '15 min',
+      'tag': 'UI Design',
+    },
+    {
+      'title': 'Gallery App',
+      'subtitle': 'Image Gallery with GridView',
+      'icon': Icons.photo_library_rounded,
+      'color': const Color(0xFFF1C40F),
+      'description': 'Display images in a grid layout',
+      'difficulty': 'Intermediate',
+      'widget': GalleryApp(), // This practical is a console app
+      'duration': '10 min',
+      'tag': 'UI Design',
+    }
+
   ];
 
   @override
