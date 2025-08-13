@@ -32,6 +32,7 @@ class _NotesAppState extends State<NotesApp> with TickerProviderStateMixin {
       vsync: this,
     );
     _loadPreferences();
+    _fabAnimationController.forward();
   }
 
   @override
@@ -454,6 +455,35 @@ class _NotesAppState extends State<NotesApp> with TickerProviderStateMixin {
                 ),
 
                 SizedBox(height: 16),
+
+                // Add Note button above notes list if there is at least one note
+                if (_filteredNotes.isNotEmpty)
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16.0,
+                      vertical: 8.0,
+                    ),
+                    child: Align(
+                      alignment: Alignment.centerRight,
+                      child: ElevatedButton.icon(
+                        onPressed: _showAddNoteDialog,
+                        icon: Icon(Icons.add),
+                        label: Text('Add Note'),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.indigo,
+                          foregroundColor: Colors.white,
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 20,
+                            vertical: 12,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          elevation: 2,
+                        ),
+                      ),
+                    ),
+                  ),
 
                 // Notes List
                 Expanded(
