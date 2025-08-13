@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:practical_1/Practicals/Practical_6/notes_app.dart';
 
 import 'practicals/Practical_4/form_validation_app.dart';
 import 'practicals/practical_1/splashscreen.dart';
@@ -57,6 +58,17 @@ class MyApp extends StatelessWidget {
       'difficulty': 'Intermediate',
       'duration': '12 min',
       'tag': 'Validation',
+    },
+    {
+      'title': 'Notes Application',
+      'subtitle': 'Note-taking & Storage',
+      'widget': NotesApp(),
+      'icon': Icons.note_rounded,
+      'color': const Color(0xFF2ECC71),
+      'description': 'Persistent note management system',
+      'difficulty': 'Intermediate',
+      'duration': '10 min',
+      'tag': 'Storage',
     },
   ];
 
